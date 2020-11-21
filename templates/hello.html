@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>测试 Title</title>
+  </head>
+  <body>
+    <h2>模板语法</h2>
+    <p>变量： {{ name }}</p>
+
+    <p>列表： {{ fruit }}</p>
+    <p>列表： {{ fruit.0 }}</p>
+
+    <p>字典： {{ person }}</p>
+    <p>字典： {{ person.age }}</p>
+
+    <p>过滤器： {{ name|lower }}</p>
+    <p>过滤器： {{ name|truncatewords:"6" }}</p>
+
+    <p>时间： {{ now|date:'Y-m-d H:i:s' }}</p>
+
+    <p>{{ views_str|safe }}</p>
+
+    <p>
+      {% if views_num > 90 and views < 100 %}
+      优秀
+      {% elif views_num > 80 %}
+      良好
+      {% else %}
+      及格
+      {% endif %}
+    </p>
+
+    <ul>
+      {% for item in fruit %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+  </body>
+</html>
